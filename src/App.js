@@ -2,43 +2,97 @@ import React, { useState } from 'react';
 import './App.css'
 import CallbackExample from './UseCallback';
 import MemoExample from './UseMemo';
+import StatelessComponent from "./StatelessComponent";
+import StatefullComponent from "./StatefullComponent";
+import UseStateExample from "./UseState";
+import UseEffectExample from "./UseEffect/UseEffectExample";
+import UseContextExample from "./UseContext";
 
 export default function App() {
 
-  const [chose, setChose] = useState(1);
+  const [choice, setChoice] = useState(1);
 
   return (
-    <div className='mainContainer'>
+      <>
+          <aside>
+            <button onClick={() => setChoice(1)}>Stateless component</button>
+            <button onClick={() => setChoice(2)}>Stateful component</button>
+            <button onClick={() => setChoice(3)}>UseState example</button>
+            <button onClick={() => setChoice(4)}>UseEffect example</button>
+            <button onClick={() => setChoice(5)}>UseContext example</button>
+            <button onClick={() => setChoice(6)}>UseCallback example</button>
+            <button onClick={() => setChoice(7)}>UseMemo example</button>
+            <button onClick={() => setChoice(8)}>UseRef example</button>
+            <button onClick={() => setChoice(9)}>UseReducer example</button>
+          </aside>
 
-      <div className='optionsContainer'> 
-        <button className='optionButton' onClick={() => setChose(1)}>UseCallback example</button>
-        <button className='optionButton' onClick={() => setChose(2)}>UseMemo example</button>
-        <button className='optionButton' onClick={() => setChose(3)}>UseRef example</button>
-        <button className='optionButton' onClick={() => setChose(4)}>UseReducer example</button>
-      </div>
+          <main>
+              {
+                  choice === 1 &&
+                  <section className='example'>
+                      <span>
+                        STATELESS COMPONENT
+                      </span>
+                      <StatelessComponent count={0}/>
+                  </section>
+              }
+              {
+                  choice === 2 &&
+                  <section className='example'>
+                      <span>
+                        STATEFULL COMPONENT
+                      </span>
+                      <StatefullComponent/>
+                  </section>
+              }
+              {
+                  choice === 3 &&
+                  <section className='example'>
+                      <span>
+                        USESTATE EXAMPLE
+                      </span>
+                      <UseStateExample/>
+                  </section>
+              }
+              {
+                  choice === 4 &&
+                  <section className='example'>
+                      <span>
+                        USESTATE EXAMPLE
+                      </span>
+                      <UseEffectExample/>
+                  </section>
+              }
+              {
+                  choice === 5 &&
+                  <section className='example useContextExample'>
+                      <span>
+                        USECONTEXT EXAMPLE
+                      </span>
+                      <UseContextExample/>
+                  </section>
+              }
+            {
+              choice === 6 &&
+                <section className='example'>
+                  <span>
+                    USECALLBACK EXAMPLE
+                  </span>
+                  <CallbackExample/>
+                </section>
+            }
 
-      <div className='choseContainer'>
-        {
-          chose === 1 &&
-            <div className='useCallbackExample'>
-              <span>
-                USECALLBACK EXAMPLE
-              </span>
-              <CallbackExample/>
-            </div>
-        }
-
-        {
-          chose === 2 &&
-            <div className='useMemoExample'>
-              <span>
-                USEMEMO EXAMPLE
-              </span>
-              <MemoExample/>
-            </div>
-        }
-      </div>
-    </div>
+            {
+              choice === 7 &&
+                <section className='example useMemoExample'>
+                  <span>
+                    USEMEMO EXAMPLE
+                  </span>
+                  <MemoExample/>
+                </section>
+            }
+          </main>
+    </>
   );
 }
 
