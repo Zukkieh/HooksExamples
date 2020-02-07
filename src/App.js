@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './App.css'
 import CallbackExample from './UseCallback';
 import MemoExample from './UseMemo';
+import RefExample from './UseRef';
+import ReducerExample from './UseReducer';
 
 export default function App() {
 
@@ -35,6 +37,26 @@ export default function App() {
                 USEMEMO EXAMPLE
               </span>
               <MemoExample/>
+            </div>
+        }
+
+        {
+          chose === 3 &&
+            <div className='useMemoExample'>
+              <span>
+                USEREF EXAMPLE
+              </span>
+              <RefExample/>
+            </div>
+        }
+
+        {
+          chose === 4 &&
+            <div className='useMemoExample'>
+              <span>
+                USEREDUCER EXAMPLE
+              </span>
+              <ReducerExample/>
             </div>
         }
       </div>
