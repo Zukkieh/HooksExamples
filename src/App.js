@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './App.css'
 import CallbackExample from './UseCallback';
 import MemoExample from './UseMemo';
@@ -83,6 +83,7 @@ export default function App() {
                   <CallbackExample/>
                 </section>
             }
+
             {
               choice === 7 &&
                 <section className='example useMemoExample'>
