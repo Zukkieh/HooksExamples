@@ -1,31 +1,32 @@
-
-.mainContainer{
+#root {
     display: flex;
     flex-direction: row;
-    height: 218px;
+    height: 500px;
 }
-.optionsContainer {
+
+aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.optionButton{
+aside button {
     border-style: solid;
     border-radius: 7px;
     border-width: 1px;
     height: 50px;
     cursor: pointer;
+    margin-top: 1px;
 }
 
-.choseContainer {
+main {
     display: flex;
     flex-direction: row;
     width: 50%;
     height: 50%;
 }
 
-.useCallbackExample, .useMemoExample{
+.example {
     display: flex;
     flex-direction: column;
     margin: 0 10px 0 10px;
@@ -35,6 +36,11 @@
     align-items: center;
 }
 
-.useMemoExample{
+.useMemoExample {
     height: fit-content;
+}
+
+.useContextExample {
+    height: 50vh;
+    border: 0;
 }
