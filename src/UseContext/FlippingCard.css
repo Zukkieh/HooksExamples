@@ -72,9 +72,9 @@
     font-size: 20px;
 }
 .card-container .main-area .blog-post .read-more {
-    font-size: 20px;
+    font-size: 12px;
     position: relative;
-    bottom: 0px;
+    bottom: 0;
     text-align: right;
 }
 .card-container .main-area .blog-post .blog-content {

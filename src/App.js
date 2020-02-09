@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './App.css'
 import CallbackExample from './UseCallback';
 import MemoExample from './UseMemo';
+import RefExample from './UseRef';
+import ReducerExample from './UseReducer';
 import StatelessComponent from "./StatelessComponent";
 import StatefullComponent from "./StatefullComponent";
 import UseStateExample from "./UseState";
@@ -58,7 +60,7 @@ export default function App() {
                   choice === 4 &&
                   <section className='example'>
                       <span>
-                        USESTATE EXAMPLE
+                        USEEFFECT EXAMPLE
                       </span>
                       <UseEffectExample/>
                   </section>
@@ -91,6 +93,24 @@ export default function App() {
                   <MemoExample/>
                 </section>
             }
+              {
+              choice === 8 &&
+                <section className='example'>
+                  <span>
+                    USEREF EXAMPLE
+                  </span>
+                  <RefExample/>
+                </section>
+              }
+              {
+              choice === 9 &&
+              <section className='useMemoExample'>
+                  <span>
+                    USEREDUCER EXAMPLE
+                  </span>
+                  <ReducerExample/>
+              </section>
+              }
           </main>
     </>
   );
