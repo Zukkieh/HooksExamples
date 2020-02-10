@@ -6,7 +6,7 @@ export default React.memo(function Counter(props) {
 
     const { add, remove } = props;  
 
-    console.log('RENDER')
+    console.log('RENDER');
 
     return (
         <div className='simpleButtonContainer'>
