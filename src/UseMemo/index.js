@@ -1,3 +1,2 @@
-import MemoExample from './MemoExample';
-
+import MemoExample from "./MemoExample";
 export default MemoExample;
