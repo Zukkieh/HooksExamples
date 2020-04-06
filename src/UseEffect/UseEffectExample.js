@@ -16,6 +16,7 @@ const UseEffectExample = () =>  {
             {
                 count === 0 ?
                     <p>Você não clicou? Alteração feita em outro branch por outra pessoa em outro PC</p> :
+                    <p>Mais alterações</p>
                     <p>Você clicou {count} vezes?</p>
             }
             <button onClick={() => setCount(count + 1)}>
