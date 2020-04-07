@@ -22,6 +22,7 @@ const UseEffectExample = () =>  {
             <button onClick={() => setCount(count + 1)}>
                 Clica aqui
             </button>
+            <p>Modificação para pull request</p>
         </article>
     );
 };
