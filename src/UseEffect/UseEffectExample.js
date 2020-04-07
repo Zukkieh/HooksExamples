@@ -13,6 +13,7 @@ const UseEffectExample = () =>  {
 
     return (
         <article>
+            <p>modificação na master</p>
             {
                 count === 0 ?
                     <p>Você não clicou? Alteração feita em outro branch por outra pessoa em outro PC</p> :
