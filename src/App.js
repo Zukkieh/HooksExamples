@@ -16,6 +16,7 @@ export default function App() {
   return (
     <>
       <h1>Mudança para usar de exemplo</h1>
+      <h2>Mudança feita no branch ExemploTeste</h2>
       <aside>
         <button onClick={() => setChoice(1)}>Stateless component</button>
         <button onClick={() => setChoice(2)}>Stateful component</button>
